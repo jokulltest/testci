@@ -15,4 +15,4 @@ jobs:
     steps:
       - name: Check Label Name
         run: |
-          echo "full_name: ${{ github.event.action }}"
+          echo "full_name: {{ github.event.label.name }}"
