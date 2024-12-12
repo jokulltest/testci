@@ -9,3 +9,10 @@ on:
       - synchronize
       - labeled
 
+
+jobs:
+  handle-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Label Name
+        run: echo "The label name is: ${{ github.event.label.name }}"
