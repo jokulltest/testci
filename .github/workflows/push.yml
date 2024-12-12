@@ -1,0 +1,11 @@
+name: Label Trigger Workflow
+
+on:
+  workflow_dispatch:
+  create:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - labeled
+
