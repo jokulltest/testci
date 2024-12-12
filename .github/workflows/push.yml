@@ -9,5 +9,4 @@ jobs:
     steps:
       - name: Check Label Name
         run: |
-          echo "full_name: ${{ github.event.pull_request.head.repo.full_name }}"
-          echo "repo ${{ github.repository }}"
+          echo "full_name: ${{ github.event.action }}"
