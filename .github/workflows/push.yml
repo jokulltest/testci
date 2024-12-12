@@ -1,18 +1,13 @@
 name: Label Trigger Workflow
 
 on:
-  workflow_dispatch:
-  create:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - labeled
-
+  pull_request: {}
 
 jobs:
   handle-label:
     runs-on: ubuntu-latest
     steps:
       - name: Check Label Name
-        run: echo "The label name is: ${{ github.event.label.name }}"
+        run: |
+          echo "full_name: ${{ github.event.pull_request.head.repo.full_name }}"
+          echo "repo ${{ github.repository }}"
